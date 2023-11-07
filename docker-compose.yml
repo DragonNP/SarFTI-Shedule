@@ -1,0 +1,11 @@
+services:
+  sarfti_schedule:
+    build:
+      context: .
+    container_name: sarfti_schedule
+    hostname: sarfti_schedule
+    volumes:
+      - /home/nikita/docker-containers/sarfti_schedule:/data:rw
+    env_file:
+      - .env
+    restart: always
